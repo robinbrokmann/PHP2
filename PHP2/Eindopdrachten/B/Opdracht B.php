@@ -13,7 +13,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if(empty($invoer)){
         $output = "voor een waarde in";
-    } else {}
+    } else {
+        if(checkValue($invoer, $type)){
+            $output = "Dit klopt";
+        } else {
+            $output = "Dit klopt niet";
+        }
+    }
 }
 
 ?>
