@@ -1,7 +1,25 @@
 <html>
 <body>
+<?php
+$invoer = "";
+$type = "";
+$output = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    include('IncludeB.php');
+
+    $invoer = $_POST["invoer"];
+    $type = $_POST["taskOption"];
+
+    if(empty($invoer)){
+        $output = "voor een waarde in";
+    } else {}
+}
+
+?>
+
 <form method="post">
-    getal 1: <input type="text" name="getal1" value= "<?php $getal ?>">
+    invoer: <input type="text" name="invoer" value= "<?php echo $invoer ?>">
     <select name="taskOption">
         <option value="alfabetisch">is deze variabele alleen alfabetisch ?</option>
         <option value="numeriek">is deze variabele aleen nummeriek ?</option>
@@ -12,6 +30,7 @@
         <option value="adres">is deze variabele een adres? </option>
     </select>
     <input type="submit">
+    <?php echo $output?>
 </form>
 </body>
 
