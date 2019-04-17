@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $type = $_POST["taskOption"];
 
     if (empty($invoer)) {
-        $output = "voor een waarde in";
+        $output = "voer een waarde in";
     } else {
         if (checkValue($invoer, $type)) {
             $output = "Dit klopt";
