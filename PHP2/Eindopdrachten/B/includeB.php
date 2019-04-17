@@ -10,8 +10,8 @@ function checkValue($invoer, $type){
             return Checkpostcode ($invoer);
         case "mobielnummer":
             return nummercheck ($invoer);
-
-
+        case "manvrouw":
+            return manvrouwcheck ($invoer);
         case "mail":
             return mailcheck ($invoer);
         case "adres":
@@ -31,6 +31,9 @@ function checkpostcode($invoer){
 }
 function nummercheck($invoer){
     return preg_match("/^(((\\+31|0|0031)6){1}[1-9]{1}[0-9]{7})$/", $invoer);
+    }
+    function manvrouwcheck($invoer){
+    return preg_match("/([male|female][man|vrouw])/i",$invoer);
     }
 function mailcheck($invoer){
     return preg_match("/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/",$invoer);
