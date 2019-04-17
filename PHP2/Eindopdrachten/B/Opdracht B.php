@@ -11,17 +11,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $invoer = $_POST["invoer"];
     $type = $_POST["taskOption"];
 
-    if(empty($invoer)){
+    if (empty($invoer)) {
         $output = "voor een waarde in";
     } else {
-        if(checkValue($invoer, $type)){
+        if (checkValue($invoer, $type)) {
             $output = "Dit klopt";
         } else {
             $output = "Dit klopt niet";
         }
     }
 }
-
 ?>
 
 <form method="post">
@@ -36,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <option value="adres">is deze variabele een adres? </option>
     </select>
     <input type="submit">
-    <?php echo $output?>
+    <?php echo $output;?>
 </form>
 </body>
 
