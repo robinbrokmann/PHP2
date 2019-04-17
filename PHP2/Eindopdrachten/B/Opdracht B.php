@@ -30,12 +30,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <option value="numeriek">is deze variabele aleen nummeriek ?</option>
         <option value="postcodecheck">nederlandse postcodecheck</option>
         <option value="mobielnummer">nederland mobiele nummer check</option>
-        <option value="manvrouw">is deze variabele alleen "man" of "vrouw"?</option>
+        <option value="man/vrouw">is deze variabele alleen "man" of "vrouw"?</option>
         <option value="mail">is deze variabele een geldig mail adres?</option>
         <option value="adres">is deze variabele een adres? </option>
     </select>
     <input type="submit">
-    <?php echo $output;?>
+    <?php
+    echo "$type " ;
+    echo $output;?>
 </form>
 </body>
 

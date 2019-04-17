@@ -10,7 +10,7 @@ function checkValue($invoer, $type){
             return Checkpostcode ($invoer);
         case "mobielnummer":
             return nummercheck ($invoer);
-        case "manvrouw":
+        case "man/vrouw":
             return manvrouwcheck ($invoer);
         case "mail":
             return mailcheck ($invoer);
